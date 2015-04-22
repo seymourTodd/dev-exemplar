@@ -1,0 +1,44 @@
+Write a program that will merge two lists of contacts together and output the merged result.
+
+For one contact list, please read a file that contains contacts that are formatted in Json, 
+following the class definition below. Example Json is also included below.
+
+For the second contact list, please create a list of contacts following the same format, 
+simulating a list of contacts that could have been read from somewhere else (ex. a database).
+No need to do anything with a database -- a hardcoded list in memory simulating something 
+read from a database is all that is needed.
+
+Write an algorithm that will merge the contacts that are read from the file with the list of contacts
+ you have hardcoded in your program.   You should merge contacts that appear to be same person -- 
+ and output the merged combined contacts.   The algorithm should be able to work efficiently, being 
+ able to merge a large number of contacts quickly.
+
+Write the results of the merge operation to another file.
+
+This should be a console type application where the contact reading / merging / writing code runs in a 
+separate thread and doesn’t exit until the output file is written.
+
+Please make sure the code is easy to follow and understand following standard coding conventions.
+
+Class definition:
+
+public class Contact
+{
+    public string FirstName { get; set;}
+    public string  LastName { get; set; }
+    public string EmailAddress { get; set; }
+    public string PhoneNumber { get; set;}
+    public string JobTitle { get; set; }
+    public string JobCompany { get; set; }
+}
+
+Example Json that can be copied to the file to read:
+
+[
+       {"FirstName":"Guy","LastName":"Tester","EmailAddress":"guy@tester.org","PhoneNumber":"703-555-1212","JobTitle":"Dude","JobCompany":"CircleBack"},          {"FirstName":"John","LastName":"Tester","EmailAddress":"john@tester.org","PhoneNumber":"703-555-1212","JobTitle":"Dude","JobCompany":"CircleBack"},    	    
+        {"FirstName":"Jane","LastName":"Tester","EmailAddress":"jane@tester.org","PhoneNumber":"703-555-9876","JobTitle":"Dudette","JobCompany":"Dub Labs"},    
+        {"FirstName":"Betty","LastName":"Tester","EmailAddress":"betty@tester.org","PhoneNumber":"703-555-2343","JobTitle":"Dudette","JobCompany":"IBM"},       
+        {"FirstName":"Ted","LastName":"Nolan","EmailAddress":"ted@tester.org","PhoneNumber":"301-555-2343","JobTitle":"Coach","JobCompany":"Sabres"},   
+        {"FirstName":"Dianna","LastName":"Russini","EmailAddress":"diana@tester.org","PhoneNumber":"212-555-2343","JobTitle":"Repoter","JobCompany":"NBC"},
+        {"FirstName":"Jim","LastName":"Kelly","EmailAddress":"jim@tester.org","PhoneNumber":"716-555-2343","JobTitle":"QA","JobCompany":"Bills"},
+        {"FirstName":"Tim","LastName":"Murray","EmailAddress":"tim@tester.org","PhoneNumber":"716-545-2343","JobTitle":"GM","JobCompany":"Sabres"}
